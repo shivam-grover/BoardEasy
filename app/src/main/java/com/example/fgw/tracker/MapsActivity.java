@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -47,7 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Button button;
    public String keyl;
     private FirebaseAuth mAuth;
-
+    public Double lo,laa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +107,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
     private void requestLocationUpdates(){
+
         LocationRequest request = new LocationRequest();
         request.setInterval(1000);
         request.setFastestInterval(50);
@@ -125,7 +127,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 public void onLocationResult(LocationResult locationResult) {
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference(path);
                     Location location = locationResult.getLastLocation();
-
+//                    latitudecurrent = location.getLatitude();
+//                    longitudecurrent = location.getLongitude();
                     if (location != null) {
 //                        Log.d(TAG, "location update " + location);
                         ref.setValue(location);
@@ -158,10 +161,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void subscribeToUpdates() {
         // Functionality coming next step
+
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("location");
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String previousChildName) {
+
+                Location A = new Location("kladms");
+//                if(dataSnapshot.child("latitude").getValue()!=null && dataSnapshot.child("longitude").getValue()!=null ){
+//
+//                Double a = Double.parseDouble(dataSnapshot.child("latitude").getValue().toString());
+//                A.setLongitude(Double.parseDouble(dataSnapshot.child("longitutde").getValue().toString()));
+//                A.setLatitude(Double.parseDouble(dataSnapshot.child("latitude").getValue().toString()));
+//                String aaa = Double.toString(A.getLatitude());
+//                Toast.makeText(getBaseContext(),aaa+"",Toast.LENGTH_SHORT).show();
                 setMarker(dataSnapshot);
             }
 
