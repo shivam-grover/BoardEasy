@@ -1,4 +1,4 @@
-# bus-tracker
+# BoardEasy
 
 Winning project at HackBVP 2.0 
 
