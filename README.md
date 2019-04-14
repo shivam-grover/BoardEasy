@@ -14,9 +14,8 @@ The user interface shows the user a map, with the real time location of all near
 
 ## Screenshots
 
-<img src="https://github.com/shivumgrover/BoardEasy/blob/master/screenshots/1.jpg" width="350" title="Suggested Price">
-<img src="https://github.com/shivumgrover/BoardEasy/blob/master/screenshots/2.jpg" width="350" title="Suggested Price">
-<img src="https://github.com/shivumgrover/BoardEasy/blob/master/screenshots/3.jpg" width="350" title="Suggested Price">
+<img src="https://github.com/shivumgrover/BoardEasy/blob/master/screenshots/1.jpg" width="500" title="Suggested Price"> <img src="https://github.com/shivumgrover/BoardEasy/blob/master/screenshots/2.jpg" width="500" title="Suggested Price">
+<img src="https://github.com/shivumgrover/BoardEasy/blob/master/screenshots/3.jpg" width="500" title="Suggested Price">
 
 
 Our app would enable many more things, such as 
