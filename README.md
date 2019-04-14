@@ -1,6 +1,6 @@
 # bus-tracker
 
-Winning project at HackBVP 2.0
+Winning project at HackBVP 2.0 
 Initially called *sahay*
 
 
